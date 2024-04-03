@@ -1,0 +1,64 @@
+.registration{
+  max-width: 1255px;
+
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &__wrap {
+    position: relative;
+
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 16px;
+
+    height: 170px;
+    width: 100%;
+
+    padding: 16px 12px;
+
+    border-radius: 20px;
+
+    background-image: url('src/images/png/registration/registrationBannerShadow.png');
+    background-size: cover;
+   
+    @include tablet {
+      height: 200px;
+
+      padding: 48px 36px;
+    }
+
+    @include laptop  {
+      gap: 84px;
+      justify-content: normal;
+
+      height: 270px;
+
+      padding: 70px 56px;
+    }
+  }
+
+
+
+  &__title {
+    flex-basis: 150%;
+  
+    font-size: 26px;
+    line-height: 26px; 
+    color: $white;
+
+    text-transform: capitalize;
+
+    @include tablet {
+      flex-basis: auto;
+      
+      font-size: 32px;
+      line-height: 32px; 
+    }
+
+    @include laptop  {
+      font-size: 64px;
+      line-height: 64px; 
+    }
+  }
+}

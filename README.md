@@ -1,0 +1,9 @@
+To run the project in developer mode, you need to follow a few steps and enter some commands in the terminal:
+
+1. You have to be on the branch main
+
+2. npm install -g sass
+
+3. In order for ssas to monitor changes in files in real time:
+
+sass --watch src/components/styles.scss index.css

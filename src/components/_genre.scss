@@ -1,0 +1,91 @@
+.genre {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include tablet {
+    gap: 20px;
+  }
+
+  @include laptop  {
+    gap: 26px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    
+    width: 100%;
+    height: 150px;
+   
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    @include tablet {
+      transition: transform 0.3s;
+    
+    }
+  
+  
+    @include laptop  {
+      height: 198px;
+      max-width: 340px;
+    }
+    
+
+    &:hover{
+      @include tablet {
+        transform: scale(1.1);
+      }
+    }
+
+    svg {
+      margin-bottom: 8px;
+     
+    }
+  }
+
+  &__text {
+    font-size: 28px;
+    line-height: 20px; 
+    color: $white;
+  }
+
+  .romance {
+    background: linear-gradient(136deg, #fd093f 0%, #f383f1 100%);
+  }
+
+  .drama {
+    background: linear-gradient(143deg, #0fffda 0%, #3cdb77 100%);
+  }
+
+  .historical {
+    background: linear-gradient(136deg, #b936ff 0%, #57deda 100%);
+  }
+
+  .action {
+    background: linear-gradient(136deg, #fd093f 0%, #fb1378 0.01%, #fccb1a 100%);
+  }
+
+  .sciFi {
+    background: linear-gradient(136deg, #ff6472 0%, #fda75d 100%);
+  }
+
+  .horror {
+    background: linear-gradient(137deg, #13547a 0%, #80d0c7 100%);
+  }
+
+  .comedy {
+    background: linear-gradient(137deg, #fff77b 0%, #ffbf42 100%);
+  }
+
+  .documentary {
+    background: linear-gradient(136deg, #1fa2ff 0%, #1fa2ff 0.01%, #1f535c 97.4%);
+  }
+}

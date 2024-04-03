@@ -1,0 +1,194 @@
+
+.heroSection {
+  position: relative;
+
+  padding: 0;
+  margin-bottom: 12px;
+
+  border-bottom: 2px solid $grey-2f;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 16px;
+   
+    @include tablet {
+      gap: 28px;
+    }
+
+    @include laptop {
+      flex-direction: row;
+
+      max-height: 765px;
+      min-height: 640px;
+      height: 100vh;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+
+    padding-bottom: 16px;
+
+    box-shadow: 0 -61px 100px 4px $black;
+   
+    @include tablet {
+      padding-bottom: 24px;
+    
+    }
+
+    @include laptop {
+      flex-basis: 38%;
+
+      padding-bottom: 0;
+
+      box-shadow: 140px 0 100px 0 $black;
+    }
+  }
+
+
+  &__info {
+    display: flex;
+    align-items:center;
+
+    margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include laptop {
+      margin-bottom: 25px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__year, 
+  &__rating,
+  &__duration {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 16px;
+    color: $white;
+  }
+
+  &__year {
+    margin-right: 18px;
+  }
+
+  &__rating {
+    margin-right: 12px;
+  }
+
+  &__duration {
+    margin-right: 32px;
+
+    @include tablet {
+      margin-right: 58px;
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    margin-right: 18px;
+    padding: 4px 14px;
+
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 16px; 
+    color: $white;
+
+    text-align: center;
+
+    background-color: $black;
+    border-radius: 20px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; 
+      right: 0; 
+      bottom: 0; 
+      left: 0;
+      z-index: -1;
+
+      margin: -2px; 
+
+      border-radius: 20px; 
+    
+      background: linear-gradient(-15deg, #26FFF2 0%, #326CFF 100%);
+    }
+  }
+
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;  
+    color: $white;
+
+    @include tablet {
+      margin-bottom: 40px;
+
+      font-size: 56px;
+      line-height: 64px;  
+    }
+
+    @include laptop {
+      font-size: min(80px, calc(56px + (80 - 56) * ((100vw - 1000px) / (1600 - 1000))));
+      line-height: 70px;  
+    }
+
+  }
+
+  &__text {
+    margin-bottom: 24px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px; 
+    color: $grey-c2;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include laptop {
+      margin-bottom: 35px; 
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 30px;
+  }
+
+
+  img {
+    width: 100vw;
+
+    @include laptop {
+      position: absolute;
+      left: auto;
+      right: 0;
+      z-index: -1;
+
+      width: 60%;
+      height: 100%; 
+
+      object-fit: cover;
+    }
+  }
+}

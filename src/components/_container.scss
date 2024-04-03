@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  max-width: 540px;
+
+  @include tablet {
+    max-width: 750px;
+  }
+
+  @include laptop {
+    max-width: 1470px;
+    
+  }
+}

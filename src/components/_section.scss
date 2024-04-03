@@ -1,0 +1,92 @@
+.section {
+  padding: 25px 0;
+ 
+  @include tablet {
+    padding: 35px 0;
+  }
+
+
+  @include laptop  {
+    padding: 50px 0;
+  }
+
+  &__title {
+    position: relative;
+
+    display: inline-flex;
+    margin-bottom: 20px;
+    padding-left: 16px;
+   
+    font-size: 20px;
+    line-height: normal;
+    color: $white;
+
+    @include tablet {
+      padding-left: 20px;
+      margin-bottom: 24px;
+
+      font-size: 24px;
+    }
+  
+    @include laptop  {
+      margin-bottom: 40px;
+
+      font-size: 28px;
+    }
+  
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 50%;
+   
+      height: 5px;
+      width: 25px;
+
+      border-radius: 50px;
+     
+      background: linear-gradient(172deg, #26fff2 0%, #326cff 100%);
+
+      transform: translateY(-50%) rotate(90deg);
+
+      @include tablet {
+        left: -12px;
+
+        width: 30px;
+        height: 6px;
+      }
+    
+    
+      @include laptop  {
+        left: -13px;
+
+        width: 35px;
+        height: 8px;
+      }
+    
+    }
+
+    .icon {
+      position: absolute;
+      right: -35px;
+      bottom: -2px;
+
+      width: 40px;
+      height: 25px;
+      
+      fill: $white;
+
+      @include tablet {
+        height: 30px;
+      }
+    
+      @include laptop  {
+        right: -40px;
+        bottom: -2px;
+
+        height: 35px;
+      }
+    }
+  }
+}

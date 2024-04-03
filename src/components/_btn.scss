@@ -1,0 +1,64 @@
+.btn {
+  font-family: "Mulish", sans-serif;
+  max-width: 141px;
+  width: 100%;
+  
+  appearance: none;
+  border: none;
+
+  border-radius: 100px;
+
+  transition: transform 0.3s ease; 
+
+  &-primary {
+    background: linear-gradient(325deg, #26fff2 0%, #326cff 100%);
+    box-shadow: 0 4px 50px 0 rgba(50, 108, 255, 0.5);
+
+    a {
+      color: $white;
+    }
+  }
+
+  &-secondary {
+    background-color: $white;
+    
+    a {
+      color:$black-32;
+    }
+  }
+
+  &--lg {
+    max-width: 195px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 12px;
+
+    width: 100%;
+    
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px; 
+
+    text-decoration: none;
+  
+    @include tablet {
+      padding: 15px 18px;
+    }
+
+    svg {
+      margin-right: 15px;
+
+      width: 14px;
+      height: 18px;
+    }
+  }
+}

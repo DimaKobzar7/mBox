@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  
+  max-width: 385px;
+  width: 100%;
+
+  &__link {
+    position: relative;
+  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px; 
+    color: $white;
+
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.3s, font-weight 0.3s, text-shadow 0.3s;
+
+    &.active {
+      opacity: 1;
+      text-shadow: 0 0 .85px $white, 0 0 .85px $white;
+     
+    }
+
+    &:hover {
+      opacity: 1;
+      text-shadow: 0 0 .85px $white, 0 0 .85px $white;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0; 
+      bottom: -5px;
+
+      width: 100%;
+      height: 2px;
+
+      background: linear-gradient(172deg, #26fff2 0%, #326cff 100%);
+     
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s;
+
+      border-radius: 50px;
+  
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+      transform-origin: left;
+
+      transition: transform 0.3s;
+    }
+
+
+    &.active {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+}
+

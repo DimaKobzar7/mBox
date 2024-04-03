@@ -1,0 +1,37 @@
+.gap-20-mobile {
+  gap: 20px;
+}
+
+.gap-40-tablet {
+  @include tablet {
+    gap: 40px;
+  }
+}
+
+.gap-60-laptop {
+  @include laptop {
+    gap: 60px;
+  }
+}
+
+.mt-20-mobile {
+  margin-top: 20px;
+}
+
+
+.mt-40-tablet {
+  @include tablet {
+    margin-top: 40px;
+  }
+}
+
+.mt-55-laptop {
+  @include laptop {
+    margin-top: 55px;
+  }
+}
+
+
+.stopScrolling {
+  overflow: hidden;
+}
