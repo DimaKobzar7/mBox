@@ -1,3 +1,5 @@
+[Preview](https://dimakobzar7.github.io/mBox/)
+
 To run the project in developer mode, you need to follow a few steps and enter some commands in the terminal:
 
 1. npm install -g sass
